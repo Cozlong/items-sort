@@ -95,7 +95,7 @@ public class HomeFragment extends Fragment {
         // Inflate the layout for this fragment
         if (view == null) {
             mHandler=new MHandler();
-            view = inflater.inflate(R.layout.fragment_home1, container, false);
+            view = inflater.inflate(R.layout.fragment_home, container, false);
             init(view);
             initRecyclerView();
         }

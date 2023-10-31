@@ -4,7 +4,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".HomeFragment">
+    tools:context="fragment.HomeFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <RelativeLayout
@@ -77,7 +77,25 @@
             android:text="分类"
             android:textColor="@color/white"
             android:textSize="25sp" />
+        <ScrollView
+        android:layout_width="match_parent"
+            android:layout_marginTop="230dp"
+        android:layout_height="wrap_content"
+        android:background="@color/light_gray"
+        android:scrollbars="none">
 
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <com.example.hotelmanager.view.HotelListView
+                android:id="@+id/hotel_select_list"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+    </ScrollView>
     <ImageView
         android:id="@+id/add"
         android:layout_width="wrap_content"

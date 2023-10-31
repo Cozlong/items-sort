@@ -1,0 +1,35 @@
+
+k	java:S117{"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ç†Öıÿÿÿÿ
+g
+java:S1301—"KReplace this "switch" statement by "if" statements to increase readability.(ıŞ³‹ùÿÿÿÿ
+i	java:S116&"TRename this field "HotelList" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯âáï
+h	java:S116*"SRename this field "tv_title" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(†¾·
+f	java:S116+"RRename this field "tv_back" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö›Òw
+q	java:S116."WRename this field "rl_title_bar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ª«šÿÿÿÿÿ
+l
+java:S14503"VRemove the "mParam1" field and declare it as a local variable in the relevant methods.(•Íï‘
+l
+java:S14504"VRemove the "mParam2" field and declare it as a local variable in the relevant methods.(¡ˆ€ 
+v
+java:S1450."[Remove the "rl_title_bar" field and declare it as a local variable in the relevant methods.(¢ª«šÿÿÿÿÿ
+k
+java:S1450+"VRemove the "tv_back" field and declare it as a local variable in the relevant methods.(Ö›Òw
+m
+java:S1450*"WRemove the "tv_title" field and declare it as a local variable in the relevant methods.(†¾·
+M
+java:S1135#"2Complete the task associated to this TODO comment.(ÜûŠ—øÿÿÿÿ
+M
+java:S11352"2Complete the task associated to this TODO comment.(ğï¢öúÿÿÿÿ
+M
+java:S1135B"2Complete the task associated to this TODO comment.(ßíŠÿÿÿÿÿ
+K
+java:S1874l"0Remove this use of "getColor"; it is deprecated.(Şó€Ëüÿÿÿÿ
+F
+java:S1874q"0Remove this use of "getColor"; it is deprecated.(ÌÛÜ
+˜
+java:S1186‡"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.(ï‚ ‚
+=	java:S131—""Add a default case to this switch.(ıŞ³‹ùÿÿÿÿ
+A
+java:S10683"+Remove this unused "mParam1" private field.(•Íï‘
+A
+java:S10684"+Remove this unused "mParam2" private field.(¡ˆ€ 

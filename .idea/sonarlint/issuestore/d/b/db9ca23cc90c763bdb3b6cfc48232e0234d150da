@@ -1,0 +1,8 @@
+
+l	java:S116"RRename this field "OrderNo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÓÅƒ¾úÿÿÿÿ
+k	java:S116"VRename this field "OrderStatus" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(åÎ‘ó
+g	java:S116"RRename this field "ResName" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±àÓƒ
+i	java:S116"TRename this field "StartDate" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ã¹ÞŽ
+k	java:S116"QRename this field "RoomNo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Üîö¬ûÿÿÿÿ
+G
+java:S1068",Remove this unused "mContext" private field.(»úÅ¾øÿÿÿÿ

@@ -1,0 +1,25 @@
+<resources>
+    <string name="app_name">酒店管理</string>
+    <string name="free_homenum">空闲房间号</string>
+    <array name="room_type">
+        <item>任意</item>
+        <item>标准间（单人）</item>
+        <item>标准间（双人）</item>
+        <item>商务间（双人）</item>
+        <item>高档套房（双人）</item>
+        <item>大床房（双人）</item>
+    </array>
+
+    <array name="room_price">
+        <item>任意</item>
+        <item>300以下</item>
+        <item>600以下</item>
+        <item>900以下</item>
+    </array>
+
+    <array name="room_state">
+        <item>任意</item>
+        <item>空闲</item>
+        <item>有客</item>
+    </array>
+</resources>

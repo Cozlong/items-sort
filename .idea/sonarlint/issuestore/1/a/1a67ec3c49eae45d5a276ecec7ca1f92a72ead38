@@ -1,0 +1,21 @@
+
+g
+java:S1192."LDefine a constant instead of duplicating this literal "RoomAdapter" 8 times.(°ºªåúÿÿÿÿ
+s	java:S135>"YReduce the total number of break and continue statements in this loop to use at most one.(ÍàŒÜúÿÿÿÿ
+l	java:S127C"XRefactor the code in order to not assign to this loop counter from within the loop body.(¨…ÄK
+l	java:S127J"XRefactor the code in order to not assign to this loop counter from within the loop body.(¨…ÄK
+l	java:S127Q"XRefactor the code in order to not assign to this loop counter from within the loop body.(¨…ÄK
+J
+java:S1066H"/Merge this if statement with the enclosing one.(¢Ì„’ÿÿÿÿÿ
+J
+java:S1066O"/Merge this if statement with the enclosing one.(ØÃ±øÿÿÿÿ
+g	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ë™İ
+h
+java:S3776%"RRefactor this method to reduce its Cognitive Complexity from 55 to the 15 allowed.(½ş­è
+1
+java:S3626R"Remove this redundant jump.(ÉŠ©ƒ
+J
+java:S2200O"/Only the sign of the result should be examined.(ØÃ±øÿÿÿÿ
+m	java:S116q"SRename this field "room_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕÆÃÿÿÿÿÿ
+r	java:S116u"XRename this field "resident_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÕúêËûÿÿÿÿ
+q	java:S116v"WRename this field "start_during" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¨ÜÆ®şÿÿÿÿ

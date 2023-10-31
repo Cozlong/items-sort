@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/LL_tro"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/light_gray"
+        android:orientation="vertical">
+
+        <include layout="@layout/title_bar" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginTop="15dp"
+            android:background="@android:color/white"
+            android:orientation="vertical"
+            android:paddingTop="10dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_weight="2"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:text="订单创建时间："
+                    android:textColor="@android:color/black"
+                    android:textSize="16sp" />
+
+                <TextView
+                    android:id="@+id/order_create_time"
+                    android:layout_width="0dp"
+                    android:layout_weight="3"
+                    android:layout_height="30dp"
+                    android:gravity="center|left"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"/>
+            </LinearLayout>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="10dp"
+                android:text="订单详细信息"
+                android:textColor="@android:color/black"
+                android:textSize="16sp" />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:background="@color/light_gray" />
+
+            <ScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="10dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:orientation="vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:layout_width="100dp"
+                            android:layout_height="match_parent"
+                            android:text="房间号"
+                            android:textSize="16sp"
+                            android:textColor="@color/black"
+                            android:gravity="center|left"/>
+
+                        <LinearLayout
+                            android:background="@drawable/spinner_bg"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:gravity="center">
+                        <Spinner
+                            android:id="@+id/free_home_num"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:fadeScrollbars="true"
+                            android:gravity="center"
+                            android:textSize="16sp"
+                            android:prompt="@string/free_homenum"
+                            android:scrollIndicators="right"
+                            android:spinnerMode="dialog"/>
+                        </LinearLayout>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/textView"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="预定天数"
+                            android:textSize="16sp"
+                            android:gravity="center|left"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/book_days"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:paddingLeft="3dp"
+                            android:gravity="center"
+                            android:background="@drawable/edit_bg"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/textView9"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="住客姓名"
+                            android:gravity="center|left"
+                            android:textSize="16sp"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/resident_name"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:paddingLeft="3dp"
+                            android:gravity="center"
+                            android:background="@drawable/edit_bg"
+                            android:textSize="16sp"/>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:id="@+id/textView10"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="身份证号"
+                            android:gravity="center|left"
+                            android:textSize="16sp"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/resident_id"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:paddingLeft="3dp"
+                            android:background="@drawable/edit_bg" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:gravity="center|left"
+                            android:id="@+id/textView11"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="性别"
+                            android:textSize="16sp"
+                            android:textColor="@color/black" />
+
+                        <RadioGroup
+                            android:id="@+id/resident_sex"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:orientation="horizontal">
+
+                            <RadioButton
+                                android:id="@+id/sex_male"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:checked="true"
+                                android:text="男"
+                                android:textSize="16sp"
+                                android:theme="@style/MyRadioButton"
+                                android:textColor="@color/black" />
+
+                            <RadioButton
+                                android:id="@+id/sex_female"
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="女"
+                                android:textSize="16sp"
+                                android:theme="@style/MyRadioButton"
+                                android:textColor="@color/black" />
+                        </RadioGroup>
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:gravity="center|left"
+                            android:id="@+id/textView12"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="电话号码"
+                            android:textSize="16sp"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/resident_phone"
+                            android:textColor="@color/black"
+                            android:textSize="16sp"
+                            android:gravity="center"
+                            android:paddingLeft="3dp"
+                            android:layout_width="match_parent"
+                            android:layout_height="30dp"
+                            android:background="@drawable/edit_bg" />
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="20dp"
+                        android:orientation="horizontal"
+                        android:gravity="center">
+
+                        <TextView
+                            android:gravity="center|left"
+                            android:textSize="16sp"
+                            android:id="@+id/textView13"
+                            android:layout_width="100dp"
+                            android:layout_height="wrap_content"
+                            android:text="备注"
+                            android:textColor="@color/black" />
+
+                        <EditText
+                            android:id="@+id/resident_remark"
+                            android:textSize="16sp"
+                            android:paddingLeft="3dp"
+                            android:textColor="@color/black"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:background="@drawable/edit_bg"
+                            android:lines="5" />
+                    </LinearLayout>
+
+                    <Button
+                        android:id="@+id/submit_order"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="30dp"
+                        android:layout_marginBottom="20dp"
+                        android:background="@drawable/order_submit_bg"
+                        android:text="提交订单"
+                        android:textSize="16sp"/>
+                </LinearLayout>
+            </ScrollView>
+
+
+        </LinearLayout>
+    </LinearLayout>
+</FrameLayout>

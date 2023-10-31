@@ -1,0 +1,50 @@
+
+K
+java:S3740Æ"/Provide the parametrized type for this generic.(­ìúÒýÿÿÿÿ
+p
+java:S1192–"TDefine a constant instead of duplicating this literal "OrderDetailActivity" 3 times.(‡â¢‰úÿÿÿÿ
+g	java:S117ˆ"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—¬Ë
+C
+java:S1604u"(Make this anonymous inner class a lambda(Æ¸Âõýÿÿÿÿ
+f
+java:S1301_"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ
+s
+java:S1488Ï"]Immediately return this expression instead of assigning it to the temporary variable "strDt".(„íÛv
+f	java:S116,"RRename this field "tv_back" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö›Òw
+h	java:S116-"SRename this field "tv_title" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à´¢µ
+q	java:S116-"\Rename this field "order_create_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(à´¢µ
+i	java:S116."TRename this field "book_days" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷Í§Å
+m	java:S116."XRename this field "resident_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷Í§Å
+k	java:S116."VRename this field "resident_id" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷Í§Å
+n	java:S116."YRename this field "resident_phone" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷Í§Å
+o	java:S116."ZRename this field "resident_remark" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(÷Í§Å
+q	java:S1160"WRename this field "rl_title_bar" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¢ª«šÿÿÿÿÿ
+m	java:S1161"XRename this field "free_home_num" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š°¶
+l	java:S1162"WRename this field "resident_sex" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Š”›»
+l	java:S1163"WRename this field "submit_order" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(±«Ú¾
+E
+java:S1659-"/Declare "order_create_time" on a separate line.(à´¢µ
+`
+java:S1659."JDeclare "resident_name" and all following declarations on a separate line.(÷Í§Å
+v
+java:S14500"[Remove the "rl_title_bar" field and declare it as a local variable in the relevant methods.(¢ª«šÿÿÿÿÿ
+q
+java:S14503"[Remove the "submit_order" field and declare it as a local variable in the relevant methods.(±«Ú¾
+t
+java:S1450/"YRemove the "totalMoney" field and declare it as a local variable in the relevant methods.(ñ”¬Óûÿÿÿÿ
+k
+java:S1450,"VRemove the "tv_back" field and declare it as a local variable in the relevant methods.(Ö›Òw
+m
+java:S1450-"WRemove the "tv_title" field and declare it as a local variable in the relevant methods.(à´¢µ
+W
+java:S1874>"<Remove this use of "getSerializableExtra"; it is deprecated.(®öñûÿÿÿÿ
+<
+java:S2111@"!Use "BigDecimal.valueOf" instead.(¤ÿÇÚûÿÿÿÿ
+K
+java:S1874J"0Remove this use of "getColor"; it is deprecated.(©„…„þÿÿÿÿ
+<	java:S131_""Add a default case to this switch.(×“¾ñùÿÿÿÿ
+u
+java:S2142ž"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ý¾
+=	java:S131×""Add a default case to this switch.(ýÞ³‹ùÿÿÿÿ
+I
+java:S1068/".Remove this unused "totalMoney" private field.(ñ”¬Óûÿÿÿÿ

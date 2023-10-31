@@ -1,0 +1,9 @@
+
+-
+java:S1700"Rename field "Constant"(¬şèê
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¢ÄÚô
+o	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¬şèê
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(Â´¨Œ8Ê‰õü·1
+v	java:S115"ZRename this constant name to match the regular expression '^[A-Z][A-Z0-9]*(_[A-Z0-9]+)*$'.(¢¸8«®õü·1
+U
+java:S1118":Add a private constructor to hide the implicit public one.(Ø¡²›ÿÿÿÿÿ

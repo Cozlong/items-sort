@@ -1,0 +1,14 @@
+
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÏ²Ï
+f	java:S117"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(äÏ²Ï
+k	java:S117""QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬š•îøÿÿÿÿ
+f	java:S1172"QRename this local variable to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óÕºŒ
+r	java:S116"XRename this field "resident_name" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óøü§üÿÿÿÿ
+o	java:S116"URename this field "start_time" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(•ž³Úùÿÿÿÿ
+V	java:S107"AConstructor has 8 parameters, which is greater than 7 authorized.(äÏ²Ï
+S
+java:S1172"=Remove these unused method parameters "start_time", "during".(äÏ²Ï
+c	java:S100"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(£¡·Â
+h	java:S100""NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¬š•îøÿÿÿÿ
+c	java:S100."NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ßº»î
+c	java:S1002"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(óÕºŒ

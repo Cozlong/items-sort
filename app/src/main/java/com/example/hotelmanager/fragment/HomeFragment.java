@@ -123,6 +123,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
         ItemrecyclerView.setLayoutManager(layoutManager);
         adapter=new ItemAdapter(mContext);
+        adapter.setData(ItemlList);
         ItemrecyclerView.setAdapter(adapter);
     }
 

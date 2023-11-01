@@ -83,12 +83,8 @@ public class ItemDao {
         list.clear();
         while(cursor.moveToNext()){
             Item item=new Item();
-            map.put("sid",cursor.getInt(cursor.getColumnIndex("sid")));
-            map.put("stu_no",cursor.getString(cursor.getColumnIndex("stu_no")));
-            map.put("name",cursor.getString(cursor.getColumnIndex("name")));
-            map.put("class",cursor.getString(cursor.getColumnIndex("class")));
-            map.put("publish",cursor.getString(cursor.getColumnIndex("publish")));
-            Log.e("StudentDao",map.get("sid")+","+map.get("stu_no")+","+map.get("name")+","+map.get("class")+","+map.get("publish"));
+            item.setItem_name(cursor.getString(cursor.getColumnIndex("item_name")));
+            item.setItem_type(cursor.getString(cursor.getColumnIndex("item_type")));
             list.add(item);
         }
         cursor.close();

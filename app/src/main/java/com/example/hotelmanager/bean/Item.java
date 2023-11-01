@@ -6,14 +6,16 @@ public class Item {
     String item_name;//物品名称
     String item_type;//物品类型
     String item_position;//存放位置
+    String term_type;//期限类型
     int item_number;//物品数量,
     Date date_of_manufacture;//生产日期
     int quality_guarantee_period;//保质期
     int remind_days;//提醒日期
-    public Item(String item_name,String item_type,String item_position,int item_number,Date date_of_manufacture,int quality_guarantee_period,int remind_days){
+    public Item(String item_name,String item_type,String item_position,String term_type,int item_number,Date date_of_manufacture,int quality_guarantee_period,int remind_days){
         this.item_name=item_name;
         this.item_type=item_type;
         this.item_position=item_position;
+        this.term_type=term_type;
         this.item_number=item_number;
         this.date_of_manufacture=date_of_manufacture;
         this.quality_guarantee_period=quality_guarantee_period;
@@ -30,6 +32,10 @@ public class Item {
     public String getItem_position() {return item_position;}
 
     public void setItem_position(String item_position) {this.item_position=item_position;}
+
+    public String getTerm_type() {return term_type;}
+
+    public void setTerm_type(String term_type) {this.term_type=term_type;}
 
     public int getItem_number() {return item_number;}
 

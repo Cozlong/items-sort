@@ -52,7 +52,7 @@
         </LinearLayout>
     </LinearLayout>
         <TextView
-            android:id="@+id/limit_text"
+            android:id="@+id/term_text"
             android:layout_width="80dp"
             android:layout_height="100dp"
             android:background="@drawable/shape"
@@ -88,7 +88,7 @@
             android:textSize="25sp" />
 <!--        android:backgroundTint="@color/yellow"-->
         <Button
-            android:id="@+id/limit"
+            android:id="@+id/term"
             android:layout_width="120dp"
             android:layout_height="100dp"
             android:layout_gravity="center"

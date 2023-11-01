@@ -13,5 +13,5 @@
     <!--android:top="10dp"-->
     <!--/>-->
     <!--设置边框线的宽度和颜色-->
-    <stroke android:width="3dp" android:color="#e5bd0f" />
+    <stroke android:width="5dp" android:color="#e5bd0f" />
 </shape>

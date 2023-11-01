@@ -12,7 +12,7 @@
         android:layout_height="50dp"
         android:layout_marginLeft="47dp"
         android:layout_marginRight="47dp"
-        android:layout_marginTop="253.5dp"
+        android:layout_marginTop="223.5dp"
         android:background="@drawable/login_panel_one"
         android:layout_centerHorizontal="true">
         <EditText
@@ -54,35 +54,42 @@
             android:singleLine="true"
             android:textCursorDrawable="@drawable/color_cursor"/>
     </RelativeLayout>
-
     <RelativeLayout
-        android:id="@+id/rl_auto"
+        android:id="@+id/rl_passwordagain"
         android:layout_width="match_parent"
-        android:layout_height="40sp"
+        android:layout_height="50dp"
+        android:layout_marginLeft="47dp"
+        android:layout_marginRight="47dp"
         android:layout_below="@+id/rl_password"
-        android:layout_marginTop="5dp"
-        android:padding="10dp"
-        android:gravity="center">
-        <CheckBox
-            android:id="@+id/autolg"
-            android:layout_width="wrap_content"
+        android:layout_marginTop="7dp"
+        android:background="@drawable/login_panel_two"
+        android:layout_centerHorizontal="true">
+        <EditText
+            android:id="@+id/et_passwordagain"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:text="自动登录"
-            android:theme="@style/MyCheckbox"
-            android:textColor="@color/black"/>
+            android:layout_centerVertical="true"
+            android:background="@null"
+            android:textColorHint="@color/black"
+            android:layout_marginLeft="10dp"
+            android:textColor="@color/black"
+            android:hint="重复密码"
+            android:inputType="textPassword"
+            android:textSize="12sp"
+            android:singleLine="true"
+            android:textCursorDrawable="@drawable/color_cursor"/>
     </RelativeLayout>
-
     <Button
-        android:id="@+id/bt_login"
+        android:id="@+id/bt_register"
         android:layout_width="match_parent"
         android:layout_height="50dp"
         android:layout_marginLeft="47dp"
         android:layout_marginRight="47dp"
         android:background="@color/light_gray"
-        android:layout_below="@+id/rl_auto"
+        android:layout_below="@+id/rl_passwordagain"
         android:layout_marginTop="30dp"
         android:layout_centerHorizontal="true"
-        android:text="登录"
+        android:text="注册"
         android:textSize="15sp"
         android:textColor="@color/black" />
     <RelativeLayout
@@ -90,9 +97,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="40dp"
-        android:layout_alignLeft="@+id/bt_login"
-        android:layout_alignRight="@+id/bt_login"
-        android:layout_below="@+id/bt_login">
+        android:layout_alignLeft="@+id/bt_register"
+        android:layout_alignRight="@+id/bt_register"
+        android:layout_below="@+id/bt_register">
         <ImageView
             android:id="@+id/iv_weixin"
             android:layout_width="50dp"

@@ -28,6 +28,7 @@ public class MainActivity extends AppCompatActivity {
     private ImageView mImgHome;
     private ImageView mImgMine;
     private String Staffun;
+    private String test;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

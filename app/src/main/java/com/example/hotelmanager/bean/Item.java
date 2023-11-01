@@ -3,6 +3,7 @@ package com.example.hotelmanager.bean;
 import java.util.Date;
 
 public class Item {
+    int id;//id号
     String img;//图片
     String item_name;//物品名称
     String item_type;//物品类型
@@ -13,7 +14,8 @@ public class Item {
     Date date_of_manufacture;//生产日期
     int quality_guarantee_period;//保质期
     int remind_days;//提醒日期
-    public Item(String img,String item_name,String item_type,String item_position,String term_type,int item_number,String date_now,Date date_of_manufacture,int quality_guarantee_period,int remind_days){
+    public Item(int id,String img,String item_name,String item_type,String item_position,String term_type,int item_number,String date_now,Date date_of_manufacture,int quality_guarantee_period,int remind_days){
+        this.id=id;
         this.img=img;
         this.item_name=item_name;
         this.item_type=item_type;
@@ -25,6 +27,15 @@ public class Item {
         this.quality_guarantee_period=quality_guarantee_period;
         this.remind_days=remind_days;
     }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public String getImg() {return img;}
 
     public void setImg(String img) {this.img=img;}

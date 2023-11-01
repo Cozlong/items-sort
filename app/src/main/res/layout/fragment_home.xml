@@ -111,8 +111,8 @@
             android:layout_height="match_parent"
             android:orientation="vertical">
 
-            <com.example.hotelmanager.view.HotelListView
-                android:id="@+id/hotel_select_list"
+            <com.example.hotelmanager.view.ItemListView
+                android:id="@+id/item_list"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent" />
 

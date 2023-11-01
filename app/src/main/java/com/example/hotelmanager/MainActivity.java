@@ -55,7 +55,10 @@ public class MainActivity extends AppCompatActivity {
 
     private void initViews() {
         mTabHome = (LinearLayout) findViewById(R.id.id_tab_home);
+        mTabVideo = (LinearLayout) findViewById(R.id.id_tab_video);
+
         mImgHome = (ImageView) findViewById(R.id.id_tab_home_img);
+        mImgVideo = (ImageView) findViewById(R.id.id_tab_video_img);
     }
 
     private void initEvents() {
@@ -71,18 +74,20 @@ public class MainActivity extends AppCompatActivity {
             //根据点击的Tab切换不同的页面及设置对应的ImageButton为绿色
             switch (v.getId()) {
                 case R.id.id_tab_home: selectTab(0); break;
+                case R.id.id_tab_video: selectTab(1); break;
             }
         }};
 
     private void resetImgs() {
         mImgHome.setImageResource(R.drawable.tab_home_normal);
-
+        mImgVideo.setImageResource(R.drawable.tab_video_normal);
     }
 
     private void selectTab(int i) {
         //根据点击的Tab设置对应的ImageButton为绿色
         switch (i) {
             case 0: mImgHome.setImageResource(R.drawable.tab_home_pressed); break;
+            case 1: mImgVideo.setImageResource(R.drawable.tab_video_pressed); break;
         }
         //设置当前点击的Tab所对应的页面
         setCurrentFragment(i);

@@ -16,6 +16,13 @@
         <item name="android:textSize">10sp</item>
     </style>
 
+
+    <style name="MyEditText" parent="Theme.AppCompat.Light">
+        <item name="colorControlNormal">@android:color/darker_gray</item>
+        <item name="colorControlActivated">#FEE594</item>
+    </style>
+
+
     <style name="Dialog_Style" parent="@android:style/Theme.Dialog">
         <!--设置界面无标题栏-->
         <item name="android:windowIsFloating">true</item> <!--对话框浮在 Activity 之上-->

@@ -31,3 +31,11 @@ m
 =app/src/main/java/com/example/hotelmanager/LoginActivity.java,0\1\01d26c7e40fad6738b873691cbc8da10a3eee0d9
 i
 9app/src/main/java/com/example/hotelmanager/bean/Item.java,c\f\cfba5699dd62bcc78cab7cd050cb293acc61ec9d
+j
+:app/src/main/java/com/example/hotelmanager/bean/Order.java,2\6\268cb65e58d679ead1018fd7c8b0e840cea44af3
+w
+Gapp/src/main/java/com/example/hotelmanager/fragment/OrdersFragment.java,f\6\f6b94d84ca3b96fe179af38f79a246cc16232d6f
+p
+@app/src/main/java/com/example/hotelmanager/RegisterActivity.java,9\5\951bf44100a41f558c9e5c2c842199585b80afd4
+i
+9app/src/main/java/com/example/hotelmanager/bean/Type.java,9\f\9fd23b6b390d5e4f9f1a7690e4e300a9d12a6194

@@ -1,23 +1,25 @@
 
 =
-java:S1604F"(Make this anonymous inner class a lambda(‰ªˆF
+java:S1604C"(Make this anonymous inner class a lambda(‰ªˆF
 m
-java:S1301K"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ8¸¦Šü·1
+java:S1301H"KReplace this "switch" statement by "if" statements to increase readability.(×“¾ñùÿÿÿÿ8¸¦Šü·1
 g
-java:S1301X"KReplace this "switch" statement by "if" statements to increase readability.(ìúÇV8¸¦Šü·1
+java:S1301T"KReplace this "switch" statement by "if" statements to increase readability.(ìúÇV8Òþ›Å¸1
 g	java:S116#"RRename this field "Staffun" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(—Ù©Ã
 U
 java:S2387":"mFragments" is the name of a field in "FragmentActivity".(§™Í«üÿÿÿÿ
 s
 java:S1450#"VRemove the "Staffun" field and declare it as a local variable in the relevant methods.(—Ù©Ã8úº‹ü·1
-<	java:S131K""Add a default case to this switch.(×“¾ñùÿÿÿÿ
-=	java:S131X""Add a default case to this switch.(ìúÇV8Ë§Šü·1
+<	java:S131H""Add a default case to this switch.(×“¾ñùÿÿÿÿ
+=	java:S131T""Add a default case to this switch.(ìúÇV8óÿ›Å¸1
 N
 java:S1068",Remove this unused "mTabQuan" private field.(Äƒ‚úüÿÿÿÿ8Ûë‰ü·1
 H
 java:S1068",Remove this unused "mTabMine" private field.(ËÛ¦8Ûë‰ü·1
 N
 java:S1068"1Remove this unused "mTabAddorBack" private field.(â¸Ý†8Ûë‰ü·1
+J
+java:S1068"-Remove this unused "mImgVideo" private field.(Æ¶†æ8ÙÌœÅ¸1
 N
 java:S1068 ",Remove this unused "mImgQuan" private field.(‹ÄèÒùÿÿÿÿ8Û§Šü·1
 N

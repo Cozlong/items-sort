@@ -2,6 +2,7 @@ package com.example.hotelmanager;
 
 import android.content.Intent;
 import android.os.Bundle;
+import android.provider.ContactsContract;
 import android.view.View;
 import android.widget.ImageView;
 import android.widget.LinearLayout;
@@ -21,17 +22,11 @@ public class MainActivity extends AppCompatActivity {
 
     private List<Fragment> mFragments;
     private LinearLayout mTabHome;
-    private LinearLayout mTabVideo;
-    private LinearLayout mTabQuan;
     private LinearLayout mTabMine;
-    private LinearLayout mTabAddorBack;
 
     //四个Tab对应的ImageButton
     private ImageView mImgHome;
-    private ImageView mImgVideo;
-    private ImageView mImgQuan;
     private ImageView mImgMine;
-    private ImageView mImgAddorBack;
     private String Staffun;
 
     @Override
@@ -55,16 +50,16 @@ public class MainActivity extends AppCompatActivity {
 
     private void initViews() {
         mTabHome = (LinearLayout) findViewById(R.id.id_tab_home);
-        mTabVideo = (LinearLayout) findViewById(R.id.id_tab_video);
-
         mImgHome = (ImageView) findViewById(R.id.id_tab_home_img);
-        mImgVideo = (ImageView) findViewById(R.id.id_tab_video_img);
+        mTabMine=(LinearLayout) findViewById(R.id.id_tab_mine);
+        mImgMine=(ImageView) findViewById(R.id.id_tab_mine_img);
+
     }
 
     private void initEvents() {
         //设置四个Tab的点击事件
         mTabHome.setOnClickListener(onClickListener);
-        mTabVideo.setOnClickListener(onClickListener);
+        mTabMine.setOnClickListener(onClickListener);
     }
 
     View.OnClickListener onClickListener = new View.OnClickListener() {
@@ -74,20 +69,19 @@ public class MainActivity extends AppCompatActivity {
             //根据点击的Tab切换不同的页面及设置对应的ImageButton为绿色
             switch (v.getId()) {
                 case R.id.id_tab_home: selectTab(0); break;
-                case R.id.id_tab_video: selectTab(1); break;
+
             }
         }};
 
     private void resetImgs() {
         mImgHome.setImageResource(R.drawable.tab_home_normal);
-        mImgVideo.setImageResource(R.drawable.tab_video_normal);
+
     }
 
     private void selectTab(int i) {
         //根据点击的Tab设置对应的ImageButton为绿色
         switch (i) {
             case 0: mImgHome.setImageResource(R.drawable.tab_home_pressed); break;
-            case 1: mImgVideo.setImageResource(R.drawable.tab_video_pressed); break;
         }
         //设置当前点击的Tab所对应的页面
         setCurrentFragment(i);

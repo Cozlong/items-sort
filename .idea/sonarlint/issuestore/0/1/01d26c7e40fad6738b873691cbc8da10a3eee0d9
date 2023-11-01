@@ -1,42 +1,43 @@
 
 l
-java:S1192u"JDefine a constant instead of duplicating this literal "autologin" 3 times.(É–Ü¸şÿÿÿÿ8Ô¨ëœ¸1
+java:S1192t"JDefine a constant instead of duplicating this literal "autologin" 3 times.(É–Ü¸şÿÿÿÿ8ÔéäÃ¸1
 J
-java:S1604O"(Make this anonymous inner class a lambda(˜ç¡†ùÿÿÿÿ8Ö¨ëœ¸1
-J
-java:S1604Y"(Make this anonymous inner class a lambda(¥ÎÂÀÿÿÿÿÿ8×¨ëœ¸1
-D
-java:S1604a"(Make this anonymous inner class a lambda(ŠûœY8×¨ëœ¸1
-J
-java:S1604h"(Make this anonymous inner class a lambda(ŸíÇ„ùÿÿÿÿ8×¨ëœ¸1
+java:S1604M"(Make this anonymous inner class a lambda(˜ç¡†ùÿÿÿÿ8ÔéäÃ¸1
 E
-java:S1604o"(Make this anonymous inner class a lambda(Öİ’8Ø¨ëœ¸1
+java:S1604V"(Make this anonymous inner class a lambda(°£®Ô8ÔéäÃ¸1
+J
+java:S1604_"(Make this anonymous inner class a lambda(¥ÎÂÀÿÿÿÿÿ8ÔéäÃ¸1
+D
+java:S1604g"(Make this anonymous inner class a lambda(ŠûœY8òÚáÄ¸1
+E
+java:S1604n"(Make this anonymous inner class a lambda(Öİ’8ÔéäÃ¸1
 K
-java:S1604Œ"(Make this anonymous inner class a lambda(İ¹ÿŸùÿÿÿÿ8Ø¨ëœ¸1
+java:S1604Š"(Make this anonymous inner class a lambda(İ¹ÿŸùÿÿÿÿ8ãéäÃ¸1
 n
-java:S1301ë"KReplace this "switch" statement by "if" statements to increase readability.(ıŞ³‹ùÿÿÿÿ8Ù¨ëœ¸1
-p	java:S116&"TRename this field "et_number" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÜéÜ8ƒªëœ¸1
-w	java:S116'"VRename this field "et_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ğù‡ÿÿÿÿÿ8ƒªëœ¸1
-t	java:S116("SRename this field "bt_login" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ëÍ»ıÿÿÿÿ8ƒªëœ¸1
-u	java:S116)"TRename this field "iv_weixin" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö »ùÿÿÿÿ8„ªëœ¸1
-q	java:S116*"PRename this field "iv_qq" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¢é¿üÿÿÿÿ8„ªëœ¸1
-n	java:S116+"SRename this field "iv_weibo" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¯ï“8„ªëœ¸1
-t	java:S116,"XRename this field "login_handler" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜéÅ8„ªëœ¸1
-j	java:S100?"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á»–8«ªëœ¸1
-j	java:S100J"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Öš¹¤8¬ªëœ¸1
+java:S1301é"KReplace this "switch" statement by "if" statements to increase readability.(ıŞ³‹ùÿÿÿÿ8ãéäÃ¸1
+p	java:S116$"TRename this field "et_number" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÒÜéÜ8İêäÃ¸1
+w	java:S116%"VRename this field "et_password" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(’ğù‡ÿÿÿÿÿ8ƒªëœ¸1
+t	java:S116&"SRename this field "bt_login" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(¼ëÍ»ıÿÿÿÿ8ƒªëœ¸1
+w	java:S116'"VRename this field "bt_register" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(šòĞÎÿÿÿÿÿ8úú½Ä¸1
+u	java:S116("TRename this field "iv_weixin" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Ö »ùÿÿÿÿ8„ªëœ¸1
+q	java:S116)"PRename this field "iv_qq" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(€¢é¿üÿÿÿÿ8„ªëœ¸1
+t	java:S116*"XRename this field "login_handler" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ÜéÅ8„ªëœ¸1
+j	java:S100="NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(á»–8ûêäÃ¸1
+j	java:S100H"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(Öš¹¤8ƒëäÃ¸1
 R
-java:S1874L"0Remove this use of "getColor"; it is deprecated.(°¤Ä¹üÿÿÿÿ8¯ªëœ¸1
+java:S1874J"0Remove this use of "getColor"; it is deprecated.(°¤Ä¹üÿÿÿÿ8…ëäÃ¸1
 M
-java:S1874M"0Remove this use of "getColor"; it is deprecated.(­˜‘È8°ªëœ¸1
+java:S1874K"0Remove this use of "getColor"; it is deprecated.(­˜‘È8°ªëœ¸1
 f
-java:S3252s"DUse static access with "android.content.Context" for "MODE_PRIVATE".(¡ñï‡ûÿÿÿÿ8»ªëœ¸1
+java:S3252r"DUse static access with "android.content.Context" for "MODE_PRIVATE".(¡ñï‡ûÿÿÿÿ8ëäÃ¸1
 f
-java:S3252y"DUse static access with "android.content.Context" for "MODE_PRIVATE".(¡ñï‡ûÿÿÿÿ8¼ªëœ¸1
+java:S3252x"DUse static access with "android.content.Context" for "MODE_PRIVATE".(¡ñï‡ûÿÿÿÿ8ëäÃ¸1
 g
-java:S3252„"DUse static access with "android.content.Context" for "MODE_PRIVATE".(¡ñï‡ûÿÿÿÿ8¾ªëœ¸1
+java:S3252‚"DUse static access with "android.content.Context" for "MODE_PRIVATE".(¡ñï‡ûÿÿÿÿ8ëäÃ¸1
 |
-java:S2142’"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8Æªëœ¸1
+java:S2142"^Either re-interrupt this method or rethrow the "InterruptedException" that can be caught here.(”ı¾8ëäÃ¸1
 g
-java:S3252Ÿ"DUse static access with "android.content.Context" for "MODE_PRIVATE".(¡ñï‡ûÿÿÿÿ8Ëªëœ¸1
-Y	java:S125®"<This block of commented-out lines of code should be removed.(¢èüı8Øªëœ¸1
-D	java:S131ë""Add a default case to this switch.(ıŞ³‹ùÿÿÿÿ8İªëœ¸1
+java:S3252"DUse static access with "android.content.Context" for "MODE_PRIVATE".(¡ñï‡ûÿÿÿÿ8—ëäÃ¸1
+Y	java:S125¬"<This block of commented-out lines of code should be removed.(¢èüı8§ëäÃ¸1
+D	java:S131é""Add a default case to this switch.(ıŞ³‹ùÿÿÿÿ8§ëäÃ¸1
+^	java:S125ü"<This block of commented-out lines of code should be removed.(ûŠ”¾ûÿÿÿÿ8§ëäÃ¸1

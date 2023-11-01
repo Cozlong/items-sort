@@ -31,3 +31,7 @@ m
 =app/src/main/java/com/example/hotelmanager/LoginActivity.java,0\1\01d26c7e40fad6738b873691cbc8da10a3eee0d9
 i
 9app/src/main/java/com/example/hotelmanager/bean/Item.java,c\f\cfba5699dd62bcc78cab7cd050cb293acc61ec9d
+w
+Gapp/src/main/java/com/example/hotelmanager/fragment/OrdersFragment.java,f\6\f6b94d84ca3b96fe179af38f79a246cc16232d6f
+@
+app/build.gradle,f\4\f4a01d6a4fcb971362ec00a83903fd3902f52164

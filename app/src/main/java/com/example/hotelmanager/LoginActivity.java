@@ -31,16 +31,14 @@ public class LoginActivity extends AppCompatActivity {
 
     private String fileName="config";
     public static final int MSG_LOGIN_ERR = 1; //登录错误 2
-    public static final int MSG_CONNET_ERR = 2; //网络链接错误 3
-
+//    public static final int MSG_CONNET_ERR = 2; //网络链接错误 3
     private Context context;
-
     private EditText et_number;
     private EditText et_password;
     private Button bt_login;
+    private Button bt_register;
     private ImageView iv_weixin;
     private ImageView iv_qq;
-    private ImageView iv_weibo;
     private LoginHandler login_handler;
     private CheckBox autolg;
 
@@ -65,9 +63,9 @@ public class LoginActivity extends AppCompatActivity {
         et_number = (EditText)findViewById(R.id.et_number);
         et_password = (EditText)findViewById(R.id.et_password);
         bt_login = (Button)findViewById(R.id.bt_login);
+        bt_register = (Button)findViewById(R.id.bt_register);
         iv_weixin = (ImageView)findViewById(R.id.iv_weixin);
         iv_qq = (ImageView)findViewById(R.id.iv_qq);
-        iv_weibo = (ImageView)findViewById(R.id.iv_weibo);
         autolg=(CheckBox)findViewById(R.id.autolg);
     }
 
@@ -85,6 +83,14 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
+        bt_register.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Intent intent = new Intent(LoginActivity.this, RegisterActivity.class);
+                LoginActivity.this.startActivity(intent);
+                finish();
+            }
+        });
         //微信
         iv_weixin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -98,13 +104,6 @@ public class LoginActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
                 Toast.makeText(context, "QQ", Toast.LENGTH_SHORT).show();
-            }
-        });
-        //微博
-        iv_weibo.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View view) {
-                Toast.makeText(context, "微博", Toast.LENGTH_SHORT).show();
             }
         });
 
@@ -125,7 +124,6 @@ public class LoginActivity extends AppCompatActivity {
                 }
             }
         });
-
     }
 
     private void initContent(){
@@ -245,14 +243,14 @@ public class LoginActivity extends AppCompatActivity {
                         .show();
                     bt_login.setEnabled(true);
                     break;
-                case MSG_CONNET_ERR:
-                    new AlertDialog.Builder(LoginActivity.this)
-                        .setTitle("注意")
-                        .setMessage("网络连接错误，请检查网络")
-                        .setPositiveButton("确定",null)
-                        .create()
-                        .show();
-                    break;
+//                case MSG_CONNET_ERR:
+//                    new AlertDialog.Builder(LoginActivity.this)
+//                        .setTitle("注意")
+//                        .setMessage("网络连接错误，请检查网络")
+//                        .setPositiveButton("确定",null)
+//                        .create()
+//                        .show();
+//                    break;
             }
         }
     }

@@ -37,23 +37,6 @@
                 android:layout_centerHorizontal="true"
                 android:layout_marginLeft="15dp"
                 android:background="@android:color/white" />
-            <TextView
-                android:id="@+id/user_name"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_toLeftOf="@id/user_line"
-                android:text="张三"
-                android:textColor="@android:color/white"
-                android:textSize="17sp" />
-            <TextView
-                android:id="@+id/user_val"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:layout_marginLeft="15dp"
-                android:layout_toRightOf="@id/user_line"
-                android:text="182****5882"
-                android:textColor="@android:color/white"
-                android:textSize="17sp" />
         </RelativeLayout>
 
     </RelativeLayout>
@@ -244,7 +227,7 @@
             android:layout_width="300dp"
             android:layout_height="55dp"
             android:layout_gravity="center"
-            android:layout_marginTop="120dp"
+            android:layout_marginTop="20dp"
             android:backgroundTint="#FEE594"
             android:background="@drawable/shape"
             android:text="切换账号"

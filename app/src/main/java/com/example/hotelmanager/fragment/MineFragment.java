@@ -23,8 +23,11 @@ import androidx.fragment.app.Fragment;
 
 import com.example.hotelmanager.Constant;
 import com.example.hotelmanager.LoginActivity;
+import com.example.hotelmanager.MainActivity;
 import com.example.hotelmanager.R;
+import com.example.hotelmanager.RegisterActivity;
 import com.example.hotelmanager.bean.Staff;
+import com.example.hotelmanager.bean.User;
 import com.google.gson.Gson;
 
 import java.io.IOException;
@@ -42,14 +45,13 @@ import okhttp3.Response;
  */
 public class MineFragment extends Fragment {
 
-    // TODO: Rename parameter arguments, choose names that match
     // the fragment initialization parameters, e.g. ARG_ITEM_NUMBER
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     public static final int MSG_SHOP_OK=1;
-    private MHandler mHandler;
-
-    private TextView Id;
+//    private MHandler mHandler;
+    private TextView user_name;
+    private TextView id;
 
     private TextView pwd;
 
@@ -58,9 +60,10 @@ public class MineFragment extends Fragment {
     private TextView wechat;
     private TextView telephone;
 
-    private Button change_id;
+    private Button btn_change;
     private String mParam1;
     private String mParam2;
+    private View view=null;
     public MineFragment() {
         // Required empty public constructor
     }
@@ -90,6 +93,7 @@ public class MineFragment extends Fragment {
             mParam1 = getArguments().getString(ARG_PARAM1);
             mParam2 = getArguments().getString(ARG_PARAM2);
         }
+
     }
 
     @Override
@@ -97,23 +101,32 @@ public class MineFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         if (view == null) {
-            mHandler=new MHandler();
+//            mHandler=new MHandler();
             view = inflater.inflate(R.layout.information, container, false);
             init(view);
         }
         return view;
     }
     public void init(View view){
-        change_id.setOnClickListener(new View.OnClickListener() {
+        //        id=(TextView)view.findViewById(R.id.tv_id);
+//        user_name=(TextView)view.findViewById(R.id.tv_user);
+//        qq=(TextView)view.findViewById(R.id.tv_qq);
+//        wechat=(TextView)view.findViewById(R.id.tv_wechat);
+//        telephone=(TextView)view.findViewById(R.id.tv_phone);
+        btn_change=(Button)view.findViewById(R.id.sort);
+        btn_change.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                SharedPreferences sp = getActivity().getSharedPreferences("config", Activity.MODE_PRIVATE);
-                SharedPreferences.Editor editor = sp.edit();
-                editor.putString("autologin", "no");
-                editor.commit();
+//                SharedPreferences sp = getActivity().getSharedPreferences("config", Activity.MODE_PRIVATE);
+//                SharedPreferences.Editor editor = sp.edit();
+//                editor.putString("autologin", "no");
+//                editor.commit();
                 startActivity(new Intent(getActivity(), LoginActivity.class));
             }
         });
+
+
+
 //        bt_update.setOnClickListener(new View.OnClickListener(){
 //            @Override
 //            public void onClick(View view) {
@@ -152,55 +165,42 @@ public class MineFragment extends Fragment {
 //                client.newCall(request).enqueue(callback);
 //            }
 //        });
-        String mineinfo_url = Constant.MineInfo_URL +"?Staffun="+staffun;
-        Callback callback = new Callback()
-        {
-            @Override
-            public void onResponse(Call call, Response response) throws IOException {
-                String responseData= response.body().string();
-//                infojson=responseData;
-                Log.e("LoginActivity","onResponse");
-                Log.e("LoginActivity",responseData);
-                Gson gson=new Gson();
-                staff = gson.fromJson(responseData, Staff.class);//设置到对应的控件上显示信息
-                StaffNo=(TextView)view.findViewById(R.id.StaffNo);
-                StaffId=(TextView)view.findViewById(R.id.StaffId);
-                StaffName=(TextView)view.findViewById(R.id.StaffName);
-                Staffun=(TextView)view.findViewById(R.id.Staffun);
-                Staffpwd=(EditText)view.findViewById(R.id.Staffpwd);
-                StaffWork=(TextView)view.findViewById(R.id.StaffWork);
-                StaffSla=(TextView)view.findViewById(R.id.StaffSla);
-                StaffDate=(TextView)view.findViewById(R.id.StaffDate);
-                telephone=(EditText)view.findViewById(R.id.telephone);
-                mHandler.post(new Runnable() {
-                    @Override
-                    public void run() {
-                        StaffNo.setText(staff.getStaffNo());
-                        StaffId.setText(staff.getStaffId());
-                        StaffName.setText(staff.getStaffName());
-                        StaffWork.setText(staff.getStaffWork());
-                        Staffpwd.setText(staff.getStaffpwd());
-                        Staffun.setText(staff.getStaffun());
-                        StaffSla.setText(String.valueOf(staff.getStaffSla()));
-                        StaffDate.setText(staff.getStaffDate());
-                        telephone.setText(staff.getTelephone());
-                    }
-                });
-            }
-            @Override
-            public void onFailure(Call call, IOException e) {
-                String responseData = "Error!";
-                Log.e("LoginActivity","Failure");
-                Log.e("LoginActivity",responseData);
-            }
-        };
-        OkHttpClient client = new OkHttpClient();
-        Request request = new Request.Builder()
-                .url(mineinfo_url)
-                .build();
-        //发送请求
-        client.newCall(request).enqueue(callback);
+//        Callback callback = new Callback()
+//        {
+//            @Override
+//            public void onResponse(Call call, Response response) throws IOException {
+//                String responseData= response.body().string();
+////                infojson=responseData;
+//                Log.e("LoginActivity","onResponse");
+//                Log.e("LoginActivity",responseData);
+//                Gson gson=new Gson();
+////                staff = gson.fromJson(responseData, Staff.class);//设置到对应的控件上显示信息
 
+//                mHandler.post(new Runnable() {
+//                    @Override
+//                    public void run() {
+//                        id.setText(User.getId());
+//                        user_name.setText(User.getUser_name());
+//                        qq.setText(staff.getStaffName());
+//                        wechat.setText(staff.getStaffWork());
+//                        telephone.setText(User.getPhone_number());
+//                    }
+//                });
+//            }
+//            @Override
+//            public void onFailure(Call call, IOException e) {
+//                String responseData = "Error!";
+//                Log.e("LoginActivity","Failure");
+//                Log.e("LoginActivity",responseData);
+//            }
+//        };
+//        OkHttpClient client = new OkHttpClient();
+//        Request request = new Request.Builder()
+//                .url(mineinfo_url)
+//                .build();
+//        //发送请求
+//        client.newCall(request).enqueue(callback);
+//
     }
     class MHandler extends Handler {
         @Override

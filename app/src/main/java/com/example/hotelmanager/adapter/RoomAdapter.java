@@ -1,8 +1,6 @@
 package com.example.hotelmanager.adapter;
 
 import android.content.Context;
-import android.content.DialogInterface;
-import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -16,12 +14,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
-import com.example.hotelmanager.OrderDetailActivity;
 import com.example.hotelmanager.R;
-import com.example.hotelmanager.bean.Hotel;
 import com.example.hotelmanager.bean.Room;
 import com.google.gson.Gson;
-import com.google.gson.JsonObject;
 import com.google.gson.reflect.TypeToken;
 
 import java.math.BigDecimal;

@@ -23,13 +23,8 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".OrderDetailActivity"
-            android:exported="false" />
-        <activity
-            android:name=".OrderActivity"
-            android:exported="false" />
-        <activity
             android:name=".MainActivity"
+            android:windowSoftInputMode="adjustUnspecified|stateHidden"
             android:exported="false" />
         <activity
             android:name=".LoginActivity"

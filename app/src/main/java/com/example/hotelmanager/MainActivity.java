@@ -14,7 +14,6 @@ import androidx.fragment.app.FragmentTransaction;
 import com.example.hotelmanager.fragment.HomeFragment;
 import com.example.hotelmanager.fragment.MineFragment;
 
-
 import java.util.ArrayList;
 import java.util.List;
 

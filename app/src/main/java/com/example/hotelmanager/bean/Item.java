@@ -28,6 +28,10 @@ public class Item {
         this.remind_days=remind_days;
     }
 
+    public Item(){
+
+    }
+
     public int getId() {
         return id;
     }

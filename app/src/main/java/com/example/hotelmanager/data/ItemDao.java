@@ -8,6 +8,8 @@ import android.database.sqlite.SQLiteOpenHelper;
 import android.text.TextUtils;
 import android.util.Log;
 
+import com.example.hotelmanager.bean.Item;
+
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -23,55 +25,6 @@ public class ItemDao {
     }
     public ItemDao(SQLiteOpenHelper dbHelper) {
         this.dbHelper = dbHelper;
-    }
-
-    /**
-     * 查询，并将结果存入list中。
-     * @param list
-     * @param strSQL
-     */
-    public void execQuery(List<Map<String,Object>> list, final String strSQL) {
-        db = dbHelper.getWritableDatabase();
-        try {
-            Cursor cursor = db.rawQuery(strSQL, null);
-            cursor.moveToFirst();
-            list.clear();
-            while (!cursor.isAfterLast()) {
-                Map<String,Object> map = new HashMap<String,Object>();
-                map.put("sid", cursor.getInt(0));
-                Log.e("StudentDao Query",map.get("sid")+"");
-                map.put("stu_no", cursor.getString(1));
-                map.put("name", cursor.getString(2));
-                map.put("class", cursor.getString(3));
-                map.put("publish", cursor.getString(4));
-                list.add(map);
-                cursor.moveToNext();
-            }
-        }catch (RuntimeException e) {
-            e.printStackTrace();
-        }
-        db.close();
-    }
-
-    /**
-     * 执行sql语句，
-     * @param strSQL
-     * @return
-     */
-    public boolean execSQL(final String strSQL) {
-        db = dbHelper.getWritableDatabase();
-        db.beginTransaction();  //
-        try {
-            db.execSQL(strSQL);
-            db.setTransactionSuccessful();  //
-            return true;
-        } catch (RuntimeException e) {
-            e.printStackTrace();
-            return false;
-        }finally {
-            db.endTransaction();    //
-            db.close();
-        }
     }
 
     //获取当前日期，格式化为yyyy年MM月dd日的字符串
@@ -118,30 +71,25 @@ public class ItemDao {
         db.close();
         return  count;
     }
+
     //查询所有数据
     @SuppressLint("Range")
-    public List query(List<Map<String,Object>> list, String sno, String sname, String sclazz, String orderBy){
+    public List query(List<Item> list,String orderBy){
         db = dbHelper.getWritableDatabase();
         String selection = "1=1";
-        if (!TextUtils.isEmpty(sno))
-            selection += " and stu_no like '%"+sno+"%'";
-        if (sname != null && !sname.isEmpty())
-            selection += " and name like '%"+sname+"%'";
-        if (sclazz != null && !sclazz.isEmpty())
-            selection += " and class like '%"+sclazz+"%'";
         Log.e("StudentDao",selection);
-        Cursor cursor=db.query(TABLE_NAME,new String[]{"sid","stu_no","name","class","publish"},
+        Cursor cursor=db.query(TABLE_NAME,new String[]{"item_name","item_type","item_position","term_type","item_nmber","date_now","date_of_manufacture","quality_guarantee_period","remind_days"},
                 selection,null,null,null,orderBy);
         list.clear();
         while(cursor.moveToNext()){
-            HashMap map=new HashMap();
+            Item item=new Item();
             map.put("sid",cursor.getInt(cursor.getColumnIndex("sid")));
             map.put("stu_no",cursor.getString(cursor.getColumnIndex("stu_no")));
             map.put("name",cursor.getString(cursor.getColumnIndex("name")));
             map.put("class",cursor.getString(cursor.getColumnIndex("class")));
             map.put("publish",cursor.getString(cursor.getColumnIndex("publish")));
             Log.e("StudentDao",map.get("sid")+","+map.get("stu_no")+","+map.get("name")+","+map.get("class")+","+map.get("publish"));
-            list.add(map);
+            list.add(item);
         }
         cursor.close();
         db.close();

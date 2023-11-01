@@ -4,8 +4,8 @@
     android:id="@+id/activity_login"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@drawable/login_bg"
-    tools:context=".LoginActivity">
+    android:background="@drawable/background"
+    tools:context=".RegisterActivity">
     <RelativeLayout
         android:id="@+id/rl_number"
         android:layout_width="match_parent"
@@ -79,27 +79,46 @@
             android:singleLine="true"
             android:textCursorDrawable="@drawable/color_cursor"/>
     </RelativeLayout>
-    <Button
-        android:id="@+id/bt_register"
+    <LinearLayout
+        android:id="@+id/bt"
         android:layout_width="match_parent"
-        android:layout_height="50dp"
+        android:layout_height="wrap_content"
         android:layout_marginLeft="47dp"
         android:layout_marginRight="47dp"
-        android:background="@color/light_gray"
         android:layout_below="@+id/rl_passwordagain"
-        android:layout_marginTop="30dp"
-        android:layout_centerHorizontal="true"
-        android:text="注册"
-        android:textSize="15sp"
-        android:textColor="@color/black" />
+        android:orientation="horizontal">
+        <Button
+            android:id="@+id/bt_register"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="36dp"
+            android:background="@color/light_gray"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:text="注册"
+            android:textSize="15sp" />
+        <Button
+            android:id="@+id/bt_back"
+            android:layout_width="100dp"
+            android:layout_height="50dp"
+            android:layout_marginLeft="47dp"
+            android:layout_marginRight="47dp"
+            android:background="@color/light_gray"
+            android:layout_marginTop="30dp"
+            android:layout_centerHorizontal="true"
+            android:text="返回"
+            android:textSize="15sp" />
+
+    </LinearLayout>
+
     <RelativeLayout
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginTop="40dp"
-        android:layout_alignLeft="@+id/bt_register"
-        android:layout_alignRight="@+id/bt_register"
-        android:layout_below="@+id/bt_register">
+        android:layout_alignLeft="@+id/bt"
+        android:layout_alignRight="@+id/bt"
+        android:layout_below="@+id/bt">
         <ImageView
             android:id="@+id/iv_weixin"
             android:layout_width="50dp"

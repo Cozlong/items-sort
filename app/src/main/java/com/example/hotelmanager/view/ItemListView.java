@@ -6,16 +6,16 @@ import android.util.AttributeSet;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-public class HotelListView extends RecyclerView {
-    public HotelListView(@NonNull Context context) {
+public class ItemListView extends RecyclerView {
+    public ItemListView(@NonNull Context context) {
         super(context);
     }
 
-    public HotelListView(@NonNull Context context, AttributeSet attrs){
+    public ItemListView(@NonNull Context context, AttributeSet attrs){
         super(context,attrs);
     }
 
-    public HotelListView(@NonNull Context context, AttributeSet attrs, int defStyle){
+    public ItemListView(@NonNull Context context, AttributeSet attrs, int defStyle){
         super(context,attrs,defStyle);
 
     }

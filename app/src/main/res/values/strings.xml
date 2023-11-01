@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">理物</string>
+    <string name="app_name">酒店管理</string>
     <string name="free_homenum">空闲房间号</string>
     <array name="room_type">
         <item>任意</item>

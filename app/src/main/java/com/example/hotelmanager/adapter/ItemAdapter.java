@@ -43,22 +43,31 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
                     Gson gson=new Gson();
                     Item item=gson.fromJson(charString,new TypeToken<Item>(){}.getType());
                     List<Item> filteredList = new ArrayList<>();
+                    if(item.getItem_name()!=null){
+                        for (int i = 0; i < sourceItemlist.size(); i++) {
+                            if (sourceItemlist.get(i).getItem_name().equals(item.getItem_name())) {
+                                filteredList.add(sourceItemlist.get(i));
+                                break;
+                            }
+                        }
+                    }else{
                         filteredList=filteredListGetValue();
-                        for(int i=0;i<filteredList.size();i++){
-                            if(!item.getItem_type().equals("")){
-                                if(!filteredList.get(i).getItem_type().equals(item.getItem_type())){
+                        for(int i=0;i<filteredList.size();i++) {
+                            if (!item.getItem_type().equals("")) {
+                                if (!filteredList.get(i).getItem_type().equals(item.getItem_type())) {
                                     filteredList.remove(i);
                                     i--;
                                     continue;
                                 }
                             }
-                            if(!item.getTerm_type().equals("")){
-                                if(!filteredList.get(i).getTerm_type().equals(item.getTerm_type())){
+                            if (!item.getTerm_type().equals("")) {
+                                if (!filteredList.get(i).getTerm_type().equals(item.getTerm_type())) {
                                     filteredList.remove(i);
                                     i--;
                                     continue;
                                 }
                             }
+                        }
                     }
                     filterItemlist = filteredList;
                 }
@@ -119,7 +128,7 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
         holder.date.setText(item.getDate_now());
         Date date = new Date(System.currentTimeMillis());
         long stamp =date.getTime()-item.getDate_of_manufacture().getTime();
-        int stampDay = (int)stamp / (24 * 60 * 60 * 1000);
+        int stampDay = (int)(stamp / (24 * 60 * 60 * 1000));
         if(item.getQuality_guarantee_period()-stampDay>0){
              holder.term.setText((item.getQuality_guarantee_period()-stampDay)+"天后");
         }else {

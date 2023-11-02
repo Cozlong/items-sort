@@ -17,7 +17,11 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.hotelmanager.R;
 import com.example.hotelmanager.adapter.ItemAdapter;
 import com.example.hotelmanager.bean.Item;
+import com.example.hotelmanager.data.ItemDBHelper;
+import com.example.hotelmanager.data.ItemDao;
 
+import java.text.ParseException;
+import java.util.ArrayList;
 import java.util.List;
 
 public class HomeFragment extends Fragment implements View.OnClickListener {
@@ -36,6 +40,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private TextView term;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
+    private ItemDao itemDao;
 
     // TODO: Rename and change types of parameters
     private String mParam1;
@@ -75,7 +80,11 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onStart(){
         super.onStart();
-        initRecyclerView();
+        try {
+            initRecyclerView();
+        } catch (ParseException e) {
+            throw new RuntimeException(e);
+        }
     }
 
     @Override
@@ -86,13 +95,18 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         if (view == null) {
             view = inflater.inflate(R.layout.fragment_home, container, false);
             init(view);
-            initRecyclerView();
+            try {
+                initRecyclerView();
+            } catch (ParseException e) {
+                throw new RuntimeException(e);
+            }
         }
         return view;
     }
 
     public void init(View view){
         mContext=getActivity();
+        itemDao=new ItemDao(new ItemDBHelper(mContext));
         ItemrecyclerView=(RecyclerView) view.findViewById(R.id.item_list);
         sort=(TextView) view.findViewById(R.id.sort_text);
         term=(TextView) view.findViewById(R.id.term_text);
@@ -100,6 +114,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         bt_sort.setOnClickListener(this);
         bt_term=(Button) view.findViewById(R.id.term);
         bt_term.setOnClickListener(this);
+        ItemlList=new ArrayList<>();
 
     }
 
@@ -119,7 +134,8 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         }
     }
 
-    public void initRecyclerView() {
+    public void initRecyclerView() throws ParseException {
+        ItemlList=itemDao.query(ItemlList,"date_now desc");
         LinearLayoutManager layoutManager = new LinearLayoutManager(mContext);
         ItemrecyclerView.setLayoutManager(layoutManager);
         adapter=new ItemAdapter(mContext);

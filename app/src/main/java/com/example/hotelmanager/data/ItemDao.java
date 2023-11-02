@@ -10,6 +10,7 @@ import android.util.Log;
 
 import com.example.hotelmanager.bean.Item;
 
+import java.text.ParseException;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 import java.util.HashMap;
@@ -32,6 +33,12 @@ public class ItemDao {
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date(System.currentTimeMillis());
         return simpleDateFormat.format(date);
+    }
+
+    public static final Date getDate(String item_date) throws ParseException {
+        SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
+        Date date = simpleDateFormat.parse(item_date);
+        return date;
     }
 
     //向数据库插入一条记录
@@ -74,17 +81,24 @@ public class ItemDao {
 
     //查询所有数据
     @SuppressLint("Range")
-    public List query(List<Item> list,String orderBy){
+    public List query(List<Item> list,String orderBy) throws ParseException {
         db = dbHelper.getWritableDatabase();
         String selection = "1=1";
         Log.e("StudentDao",selection);
-        Cursor cursor=db.query(TABLE_NAME,new String[]{"item_name","item_type","item_position","term_type","item_nmber","date_now","date_of_manufacture","quality_guarantee_period","remind_days"},
+        Cursor cursor=db.query(TABLE_NAME,new String[]{"item_name","item_type","item_position","term_type","item_number","date_now","date_of_manufacture","quality_guarantee_period","remind_days"},
                 selection,null,null,null,orderBy);
         list.clear();
         while(cursor.moveToNext()){
             Item item=new Item();
             item.setItem_name(cursor.getString(cursor.getColumnIndex("item_name")));
             item.setItem_type(cursor.getString(cursor.getColumnIndex("item_type")));
+            item.setItem_position(cursor.getString(cursor.getColumnIndex("item_type")));
+            item.setTerm_type(cursor.getString(cursor.getColumnIndex("item_type")));
+            item.setItem_number(cursor.getInt(cursor.getColumnIndex("item_number")));
+            item.setDate_now(cursor.getString(cursor.getColumnIndex("date_now")));
+            item.setDate_of_manufacture(getDate(cursor.getString(cursor.getColumnIndex("date_of_manufacture"))));
+            item.setQuality_guarantee_period(cursor.getInt(cursor.getColumnIndex("date_of_manufacture")));
+            item.setRemind_days(cursor.getInt(cursor.getColumnIndex("remind_days")));
             list.add(item);
         }
         cursor.close();

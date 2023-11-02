@@ -12,7 +12,7 @@ public class ItemDBHelper extends SQLiteOpenHelper {
     private static final String TABLE_NAEM="item";
     private static final int DATABASE_VERSION=1;
 
-    ItemDBHelper(Context context){
+    public ItemDBHelper(Context context){
         super(context,DATABASE_NAEM,null,DATABASE_VERSION);
     }
 

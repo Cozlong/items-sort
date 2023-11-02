@@ -1,5 +1,7 @@
 package com.example.hotelmanager;
 
+import static com.example.hotelmanager.data.ItemDBHelper.getTime;
+
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -10,6 +12,10 @@ import android.widget.Spinner;
 import android.widget.TextView;
 
 import androidx.appcompat.app.AppCompatActivity;
+
+import com.example.hotelmanager.data.ItemDao;
+
+import java.util.Date;
 
 public class AddProjectActivity extends AppCompatActivity {
     private ImageButton add_return;
@@ -31,6 +37,11 @@ public class AddProjectActivity extends AppCompatActivity {
     private TextView add_storage;
     private EditText add_input_storage;
     private Button button;
+    private String input_item_name,input_item_type,input_item_position,input_term_type;
+    private String input_date_of_manufacture;
+    private int input_item_number,input_remind_days,input_quality_guarantee_period;
+    public AddProjectActivity() {
+    }
 
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -63,7 +74,20 @@ public class AddProjectActivity extends AppCompatActivity {
         button.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                ;
+                input_item_name = add_input_name.getText().toString();
+                input_item_type = add_input_sort.getSelectedItem().toString();
+                input_item_position = add_input_place.getText().toString();
+                input_term_type = "未到期";
+                input_item_number = Integer.parseInt(add_input_storage.getText().toString());
+                input_remind_days = Integer.parseInt(add_input_warn.getText().toString());
+                input_quality_guarantee_period = Integer.parseInt(add_input_freshnessDate.getText().toString());
+                input_date_of_manufacture = add_input_productionDate.getText().toString();
+
+                ItemDao.insert(input_item_name,input_item_type,input_item_position,input_term_type,input_item_number,
+                        input_date_of_manufacture,input_quality_guarantee_period,input_remind_days);
+                Intent intent = new Intent(AddProjectActivity.this, MainActivity.class);
+                AddProjectActivity.this.startActivity(intent);
+                finish();
             }
         });
     }

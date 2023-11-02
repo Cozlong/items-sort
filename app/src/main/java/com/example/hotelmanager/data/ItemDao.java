@@ -19,8 +19,8 @@ import java.util.Map;
 
 public class ItemDao {
     private static final String TABLE_NAME = "item";
-    private SQLiteOpenHelper dbHelper;
-    private SQLiteDatabase db;
+    private static SQLiteOpenHelper dbHelper;
+    private static SQLiteDatabase db;
     public SQLiteDatabase getDB(){
         return db;
     }
@@ -42,14 +42,20 @@ public class ItemDao {
     }
 
     //向数据库插入一条记录
-    public boolean insert(String sno,String sname,String sclazz){
+    public static boolean insert(String item_name, String item_type, String item_position, String term_type, int item_number
+            , String date_of_manufacture, int quality_guarantee_period, int remind_days){
         //获取数据库对象
         db = dbHelper.getWritableDatabase();
         ContentValues contentValues=new ContentValues();
-        contentValues.put("stu_no",sno);
-        contentValues.put("name",sname);
-        contentValues.put("class",sclazz);
-        contentValues.put("publish",getTime());
+        contentValues.put("item_name",item_name);
+        contentValues.put("item_type",item_type);
+        contentValues.put("item_position",item_position);
+        contentValues.put("term_type",term_type);
+        contentValues.put("item_number",item_number);
+        contentValues.put("date_now",getTime());
+        contentValues.put("date_of_manufacture",date_of_manufacture);
+        contentValues.put("quality_guarantee_period",quality_guarantee_period);
+        contentValues.put("remind_days",remind_days);
         //向表中插入记录
         long resv = db.insert(TABLE_NAME,null,contentValues);
         db.close();
@@ -92,8 +98,8 @@ public class ItemDao {
             Item item=new Item();
             item.setItem_name(cursor.getString(cursor.getColumnIndex("item_name")));
             item.setItem_type(cursor.getString(cursor.getColumnIndex("item_type")));
-            item.setItem_position(cursor.getString(cursor.getColumnIndex("item_type")));
-            item.setTerm_type(cursor.getString(cursor.getColumnIndex("item_type")));
+            item.setItem_position(cursor.getString(cursor.getColumnIndex("item_position")));
+            item.setTerm_type(cursor.getString(cursor.getColumnIndex("term_type")));
             item.setItem_number(cursor.getInt(cursor.getColumnIndex("item_number")));
             item.setDate_now(cursor.getString(cursor.getColumnIndex("date_now")));
             item.setDate_of_manufacture(getDate(cursor.getString(cursor.getColumnIndex("date_of_manufacture"))));

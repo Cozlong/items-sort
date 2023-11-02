@@ -22,6 +22,7 @@ import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
 
 import com.example.hotelmanager.Constant;
+import com.example.hotelmanager.InformationActivity;
 import com.example.hotelmanager.LoginActivity;
 import com.example.hotelmanager.MainActivity;
 import com.example.hotelmanager.R;
@@ -50,17 +51,13 @@ public class MineFragment extends Fragment {
     private static final String ARG_PARAM2 = "param2";
     public static final int MSG_SHOP_OK=1;
 //    private MHandler mHandler;
+    private ImageView avatar;
     private TextView user_name;
-    private TextView id;
-
-    private TextView pwd;
-
-    private TextView qq;
-
-    private TextView wechat;
-    private TextView telephone;
-
-    private Button btn_change;
+    private TextView user_val;
+    private ImageView line;
+    private ImageView pie;
+    private Button sort;
+    private TextView user_id;
     private String mParam1;
     private String mParam2;
     private View view=null;
@@ -102,117 +99,30 @@ public class MineFragment extends Fragment {
         // Inflate the layout for this fragment
         if (view == null) {
 //            mHandler=new MHandler();
-            view = inflater.inflate(R.layout.information, container, false);
+            view = inflater.inflate(R.layout.personal, container, false);
             init(view);
         }
         return view;
     }
     public void init(View view){
-        //        id=(TextView)view.findViewById(R.id.tv_id);
-//        user_name=(TextView)view.findViewById(R.id.tv_user);
-//        qq=(TextView)view.findViewById(R.id.tv_qq);
-//        wechat=(TextView)view.findViewById(R.id.tv_wechat);
-//        telephone=(TextView)view.findViewById(R.id.tv_phone);
-        btn_change=(Button)view.findViewById(R.id.sort);
-        btn_change.setOnClickListener(new View.OnClickListener() {
+        avatar=(ImageView)view.findViewById(R.id.avatar);
+        user_name=(TextView)view.findViewById(R.id.tv_user);
+        user_val=(TextView)view.findViewById(R.id.tv_qq);
+        line=(ImageView)view.findViewById(R.id.line);
+        pie=(ImageView)view.findViewById(R.id.pie);
+        user_id=(TextView)view.findViewById(R.id.userId);
+        sort=(Button)view.findViewById(R.id.sort);
+        avatar.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-//                SharedPreferences sp = getActivity().getSharedPreferences("config", Activity.MODE_PRIVATE);
-//                SharedPreferences.Editor editor = sp.edit();
-//                editor.putString("autologin", "no");
-//                editor.commit();
-                startActivity(new Intent(getActivity(), LoginActivity.class));
+                startActivity(new Intent(getActivity(), InformationActivity.class));
             }
         });
-
-
-
-//        bt_update.setOnClickListener(new View.OnClickListener(){
-//            @Override
-//            public void onClick(View view) {
-//                String Staffpwddata = Staffpwd.getText().toString();
-//                String telephonedata= telephone.getText().toString();
-//                String StaffNodata= StaffNo.getText().toString();
-//                Callback callback = new Callback()
-//                {
-//                    @Override
-//                    public void onResponse(Call call, Response response) throws IOException {
-//                        String responseData = response.body().string();
-//                        Log.e("LoginActivity","onResponse");
-//                        Log.e("LoginActivity",responseData);
-//                        if(responseData.equals("success")) {
-//                            Looper.prepare();
-//                            Toast.makeText(getActivity(), "修改成功", Toast.LENGTH_SHORT).show();
-//                            Looper.loop();
-//                        }else{
-//                            Looper.prepare();
-//                            Toast.makeText(getActivity(), "修改失败", Toast.LENGTH_SHORT).show();
-//                            Looper.loop();
-//                        }
-//                    }
-//                    @Override
-//                    public void onFailure(Call call, IOException e) {
-//                        String responseData = "Error!";
-//                        Log.e("LoginActivity","Failure");
-//                        Log.e("LoginActivity",responseData);
-//                    }
-//                };
-//                OkHttpClient client = new OkHttpClient();
-//                Request request = new Request.Builder()
-//                        .url(login_check_url)
-//                        .build();
-//                //发送请求
-//                client.newCall(request).enqueue(callback);
-//            }
-//        });
-//        Callback callback = new Callback()
-//        {
-//            @Override
-//            public void onResponse(Call call, Response response) throws IOException {
-//                String responseData= response.body().string();
-////                infojson=responseData;
-//                Log.e("LoginActivity","onResponse");
-//                Log.e("LoginActivity",responseData);
-//                Gson gson=new Gson();
-////                staff = gson.fromJson(responseData, Staff.class);//设置到对应的控件上显示信息
-
-//                mHandler.post(new Runnable() {
-//                    @Override
-//                    public void run() {
-//                        id.setText(User.getId());
-//                        user_name.setText(User.getUser_name());
-//                        qq.setText(staff.getStaffName());
-//                        wechat.setText(staff.getStaffWork());
-//                        telephone.setText(User.getPhone_number());
-//                    }
-//                });
-//            }
-//            @Override
-//            public void onFailure(Call call, IOException e) {
-//                String responseData = "Error!";
-//                Log.e("LoginActivity","Failure");
-//                Log.e("LoginActivity",responseData);
-//            }
-//        };
-//        OkHttpClient client = new OkHttpClient();
-//        Request request = new Request.Builder()
-//                .url(mineinfo_url)
-//                .build();
-//        //发送请求
-//        client.newCall(request).enqueue(callback);
-//
-    }
-    class MHandler extends Handler {
-        @Override
-        public void dispatchMessage(@NonNull Message msg) {
-            super.dispatchMessage(msg);
-            switch (msg.what){
-                case MSG_SHOP_OK:
-                    if(msg.obj!=null){
-                        String result=(String) msg.obj;
-                    }
-                    break;
+        sort.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                user_id.setText("yeah！lalalalallalalalallalalallalalalala");
             }
-        }
+        });
     }
 }

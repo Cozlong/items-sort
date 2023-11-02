@@ -9,7 +9,9 @@ public class Type {
         this.icon=icon;
         this.type_name=item_name;
     }
+    public Type(){
 
+    }
     public int getId() {
         return id;
     }

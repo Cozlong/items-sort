@@ -17,6 +17,9 @@ public class User {
         this.qq=qq;
         this.wechat=wechat;
     }
+    public User(){
+
+    }
     public String getImg() {
         return img;
     }

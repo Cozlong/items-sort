@@ -4,10 +4,21 @@ public class Type {
     int id;//id号
     String icon;//图标
     String type_name;//名称
-    public Type(int id,String icon,String item_name){
+    int count;//数量
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
+
+    public Type(int id, String icon, String item_name, int count){
         this.id=id;
         this.icon=icon;
         this.type_name=item_name;
+        this.count=count;
     }
     public Type(){
 

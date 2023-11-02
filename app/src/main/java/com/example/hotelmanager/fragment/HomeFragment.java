@@ -1,6 +1,9 @@
 package com.example.hotelmanager.fragment;
 
 import android.content.Context;
+import android.content.Intent;
+
+import android.content.Context;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -17,6 +20,8 @@ import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.hotelmanager.AddProjectActivity;
+import com.example.hotelmanager.MainActivity;
 import com.example.hotelmanager.R;
 import com.example.hotelmanager.adapter.ItemAdapter;
 import com.example.hotelmanager.bean.Item;
@@ -42,6 +47,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private Button bt_term;
     private TextView sort;
     private TextView term;
+    private ImageView add;
     private static final String ARG_PARAM1 = "param1";
     private static final String ARG_PARAM2 = "param2";
     private ItemDao itemDao;
@@ -117,6 +123,14 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         search.setOnClickListener(this);
         sort=(TextView) view.findViewById(R.id.sort_text);
         term=(TextView) view.findViewById(R.id.term_text);
+        add = (ImageView) view.findViewById(R.id.add);
+        add.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(getActivity(), AddProjectActivity.class);
+                startActivity(intent);
+            }
+        });
         bt_sort=(Button) view.findViewById(R.id.sort);
         bt_sort.setOnClickListener(this);
         bt_term=(Button) view.findViewById(R.id.term);

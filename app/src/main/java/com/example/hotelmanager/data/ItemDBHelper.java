@@ -30,13 +30,13 @@ public class ItemDBHelper extends SQLiteOpenHelper {
                 +"quality_guarantee_period integer,remind_days interger)";
         db.execSQL(strSQL1);
         String sql="insert into "+TABLE_NAME1+"(item_name,item_type,item_position,term_type,item_number,date_now,date_of_manufacture,quality_guarantee_period,remind_days)"
-                +"values('牛奶','食品','抽屉','未到期','10',"+getTime()+",'2023-03-12',60,20)";
+                +"values('牛奶','食品','抽屉','未到期','10','"+getTime()+"','2023-03-12',60,20)";
         db.execSQL(sql);
          sql="insert into "+TABLE_NAME1+"(item_name,item_type,item_position,term_type,item_number,date_now,date_of_manufacture,quality_guarantee_period,remind_days)"
-                +"values('消炎药','医药','桌子上','过期','1',"+getTime()+",'2023-02-12',360,180)";
+                +"values('消炎药','医药','桌子上','过期','1','"+getTime()+"'','2023-02-12',360,180)";
         db.execSQL(sql);
          sql="insert into "+TABLE_NAME1+"(item_name,item_type,item_position,term_type,item_number,date_now,date_of_manufacture,quality_guarantee_period,remind_days)"
-                +"values('洗面奶','洗漱','桶里','临期','1',"+getTime()+",'2023-02-12',180,80)";
+                +"values('洗面奶','洗漱','桶里','临期','1','"+getTime()+"','2023-02-12',180,80)";
         db.execSQL(sql);
         String strSQL2="create table "+TABLE_NAME2
                 +"(img varchar(100),id varchar(100),"

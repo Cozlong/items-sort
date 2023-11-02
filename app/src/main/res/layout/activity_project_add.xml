@@ -135,7 +135,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:theme="@style/MyEditText" />
         </LinearLayout>
 
@@ -157,7 +157,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:inputType="number"
                 android:theme="@style/MyEditText" />
 
         </LinearLayout>
@@ -180,7 +180,7 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:ems="10"
-                android:inputType="textPersonName"
+                android:inputType="text"
                 android:theme="@style/MyEditText" />
         </LinearLayout>
 
@@ -197,7 +197,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:hint="请输入库存"
-            android:inputType="text"
+            android:inputType="number"
             android:textColor="@color/black"
             android:textColorHint="#888888"
             android:textSize="14dp"

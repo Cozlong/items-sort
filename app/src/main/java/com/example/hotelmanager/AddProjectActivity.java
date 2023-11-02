@@ -17,6 +17,8 @@ import androidx.appcompat.app.AppCompatActivity;
 
 import com.example.hotelmanager.data.ItemDao;
 
+import org.apache.commons.lang3.StringUtils;
+
 import java.util.Date;
 
 public class AddProjectActivity extends AppCompatActivity {
@@ -80,14 +82,16 @@ public class AddProjectActivity extends AppCompatActivity {
                 input_item_type = add_input_sort.getSelectedItem().toString();
                 input_item_position = add_input_place.getText().toString();
                 input_term_type = "过期";
-                input_item_number = Integer.parseInt(add_input_storage.getText().toString());
-                input_remind_days = Integer.parseInt(add_input_warn.getText().toString());
-                input_quality_guarantee_period = Integer.parseInt(add_input_freshnessDate.getText().toString());
+                input_item_number = Integer.parseInt(StringUtils.isNotEmpty(add_input_storage.getText().toString())?
+                        add_input_storage.getText().toString():"0");
+                input_remind_days = Integer.parseInt(StringUtils.isNotEmpty(add_input_warn.getText().toString())?
+                        add_input_warn.getText().toString():"0");
+                input_quality_guarantee_period = Integer.parseInt(StringUtils.isNotEmpty(add_input_freshnessDate.getText().toString())?
+                        add_input_freshnessDate.getText().toString():"0");
                 input_date_of_manufacture = add_input_productionDate.getText().toString();
                 if(input_item_name.length()==0||input_item_type.length()==0||input_item_position.length()==0
-                ||add_input_storage.getText().toString().length()==0||add_input_warn.getText().toString().length()
-                ==0||add_input_freshnessDate.getText().toString().length()==0||input_date_of_manufacture.length()
-                ==0){
+                ||input_item_number==0||input_remind_days==0||input_quality_guarantee_period==0||
+                        input_date_of_manufacture.length()==0){
                     new AlertDialog.Builder(AddProjectActivity.this).setTitle("输入信息有误")
                             .setMessage("请输入完整的物品信息")
                             .setPositiveButton("确定", new DialogInterface.OnClickListener() {

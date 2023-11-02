@@ -1,6 +1,7 @@
 package com.example.hotelmanager.adapter;
 
 import android.content.Context;
+import android.content.Intent;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +16,9 @@ import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.bumptech.glide.Glide;
+import com.example.hotelmanager.AddProjectActivity;
+import com.example.hotelmanager.ItemActivity;
+import com.example.hotelmanager.MainActivity;
 import com.example.hotelmanager.R;
 import com.example.hotelmanager.bean.Item;
 import com.google.gson.Gson;
@@ -139,10 +143,18 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
 
     @NonNull
     @Override
-    public ItemAdapter.ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
+    public ViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View view = LayoutInflater.from(parent.getContext())
                 .inflate(R.layout.itemlist_item, parent,false);
         final ItemAdapter.ViewHolder holder = new ItemAdapter.ViewHolder(view);
+        holder.details.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(mContext, ItemActivity.class);
+                intent.putExtra("jhj",holder.item_name.getText().toString());
+                mContext.startActivity(intent);
+            }
+        });
         Log.e("ItemAdapter", "onCreateViewHolder");
         return holder;
     }

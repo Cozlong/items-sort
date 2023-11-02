@@ -136,7 +136,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         bt_term=(Button) view.findViewById(R.id.term);
         bt_term.setOnClickListener(this);
         ItemlList=new ArrayList<>();
-
     }
 
     @Override
@@ -169,7 +168,6 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         String sql="select item_type,count(*) from item group by item_type";
         List<Type> typeList=new ArrayList<>();
         itemDao.execQuery(typeList,sql);
-
     }
 
     private void startQueryTermList(){

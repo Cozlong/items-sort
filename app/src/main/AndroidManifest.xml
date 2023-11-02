@@ -38,6 +38,9 @@
         <activity
         android:name=".AddProjectActivity"
         android:exported="false" />
+        <activity
+            android:name=".ItemActivity"
+            android:exported="false" />
     </application>
 
 </manifest>

@@ -9,6 +9,7 @@ import android.text.TextUtils;
 import android.util.Log;
 
 import com.example.hotelmanager.bean.Item;
+import com.example.hotelmanager.bean.Type;
 
 import java.text.ParseException;
 import java.text.SimpleDateFormat;
@@ -40,7 +41,30 @@ public class ItemDao {
         Date date = simpleDateFormat.parse(item_date);
         return date;
     }
-
+    public void execQuery(List<Type> list, final String strSQL) {
+        db = dbHelper.getWritableDatabase();
+        try {
+            Cursor cursor = db.rawQuery(strSQL, null);
+            cursor.moveToFirst();
+            list.clear();
+            Type first_type=new Type();
+            first_type.setType_name("全部");
+            list.add(first_type);
+            int sum=0;
+            while (!cursor.isAfterLast()) {
+                Type type=new Type();
+                type.setType_name(cursor.getString(0));
+                type.setCount(cursor.getInt(1));
+                sum+= type.getCount();
+                list.add(type);
+                cursor.moveToNext();
+            }
+            list.get(0).setCount(sum);
+        }catch (RuntimeException e) {
+            e.printStackTrace();
+        }
+        db.close();
+    }
     //向数据库插入一条记录
     public static boolean insert(String item_name, String item_type, String item_position, String term_type, int item_number
             , String date_of_manufacture, int quality_guarantee_period, int remind_days){
@@ -63,7 +87,6 @@ public class ItemDao {
             return false;
         else
             return true;
-
     }
     //根据sid删除记录
     public int delete(int sid){
@@ -73,14 +96,20 @@ public class ItemDao {
         return count;
     }
     //修改数据
-    public int update(String sno,String sname,String sclazz,int sid){
+    public static int update(String item_name, String item_type, String item_position, String term_type, int item_number
+            , String date_of_manufacture, int quality_guarantee_period, int remind_days){
         db = dbHelper.getWritableDatabase();
         ContentValues contentValues=new ContentValues();
-        contentValues.put("stu_no",sno);
-        contentValues.put("name",sname);
-        contentValues.put("class",sclazz);
-        contentValues.put("publish",getTime());
-        int count = db.update(TABLE_NAME,contentValues,"sid=?",new String[]{sid+""});
+        contentValues.put("item_name",item_name);
+        contentValues.put("item_type",item_type);
+        contentValues.put("item_position",item_position);
+        contentValues.put("term_type",term_type);
+        contentValues.put("item_number",item_number);
+        contentValues.put("date_now",getTime());
+        contentValues.put("date_of_manufacture",date_of_manufacture);
+        contentValues.put("quality_guarantee_period",quality_guarantee_period);
+        contentValues.put("remind_days",remind_days);
+        int count = db.update(TABLE_NAME,contentValues,"item_name=?",new String[]{item_name+""});
         db.close();
         return  count;
     }
@@ -91,11 +120,12 @@ public class ItemDao {
         db = dbHelper.getWritableDatabase();
         String selection = "1=1";
         Log.e("StudentDao",selection);
-        Cursor cursor=db.query(TABLE_NAME,new String[]{"item_name","item_type","item_position","term_type","item_number","date_now","date_of_manufacture","quality_guarantee_period","remind_days"},
+        Cursor cursor=db.query(TABLE_NAME,new String[]{"item_id","item_name","item_type","item_position","term_type","item_number","date_now","date_of_manufacture","quality_guarantee_period","remind_days"},
                 selection,null,null,null,orderBy);
         list.clear();
         while(cursor.moveToNext()){
             Item item=new Item();
+            item.setId(cursor.getInt(cursor.getColumnIndex("item_id")));
             item.setItem_name(cursor.getString(cursor.getColumnIndex("item_name")));
             item.setItem_type(cursor.getString(cursor.getColumnIndex("item_type")));
             item.setItem_position(cursor.getString(cursor.getColumnIndex("item_position")));

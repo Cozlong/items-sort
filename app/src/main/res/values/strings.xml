@@ -1,6 +1,14 @@
 <resources>
     <string name="app_name">理物</string>
     <string name="free_homenum">空闲房间号</string>
+    <string name="logo">logo</string>
+    <string name="qq">腾讯QQ</string>
+    <string name="wechat">微信</string>
+    <string name="register">注册</string>
+    <string name="login">登录</string>
+    <string name="autoLogin">自动登录</string>
+    <string name="password">密码</string>
+    <string name="userName">用户名/手机号</string>
     <array name="room_type">
         <item>任意</item>
         <item>标准间（单人）</item>

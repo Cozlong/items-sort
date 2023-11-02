@@ -125,7 +125,6 @@ public class ItemAdapter extends RecyclerView.Adapter<ItemAdapter.ViewHolder> im
         Item item = filterItemlist.get(position);
         Glide.with(mContext).load(R.drawable.homeblack).error(R.mipmap.ic_launcher).into(holder.img);
         holder.item_name.setText(item.getItem_name());
-        Log.e("jjj", "onBindViewHolder: "+item.getDate_now() );
         holder.date.setText(item.getDate_now());
         Date date = new Date(System.currentTimeMillis());
         long stamp =date.getTime()-item.getDate_of_manufacture().getTime();

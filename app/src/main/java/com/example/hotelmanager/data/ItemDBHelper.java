@@ -28,13 +28,14 @@ public class ItemDBHelper extends SQLiteOpenHelper {
                 +"quality_guarantee_period integer,remind_days interger)";
         db.execSQL(strSQL);
         String sql="insert into "+TABLE_NAEM+"(item_name,item_type,item_position,term_type,item_number,date_now,date_of_manufacture,quality_guarantee_period,remind_days)"
-                +"values('牛奶','食品','抽屉','未到期','10',"+getTime()+",'2023-03-12',60,20)";
+                +"values('牛奶','食品','抽屉','未到期','10','"+getTime()+"','2023-03-12',60,20)";
+        Log.e("jjj", "onItemDBHelper: "+getTime());
         db.execSQL(sql);
          sql="insert into "+TABLE_NAEM+"(item_name,item_type,item_position,term_type,item_number,date_now,date_of_manufacture,quality_guarantee_period,remind_days)"
-                +"values('消炎药','医药','桌子上','过期','1',"+getTime()+",'2023-02-12',360,180)";
+                +"values('消炎药','医药','桌子上','过期','1','"+getTime()+"','2023-02-12',360,180)";
         db.execSQL(sql);
          sql="insert into "+TABLE_NAEM+"(item_name,item_type,item_position,term_type,item_number,date_now,date_of_manufacture,quality_guarantee_period,remind_days)"
-                +"values('洗面奶','洗漱','桶里','临期','1',"+getTime()+",'2023-02-12',180,80)";
+                +"values('洗面奶','洗漱','桶里','临期','1','"+getTime()+"','2023-02-12',180,80)";
         db.execSQL(sql);
     }
 
@@ -45,7 +46,6 @@ public class ItemDBHelper extends SQLiteOpenHelper {
     public static final String getTime(){
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date(System.currentTimeMillis());
-        Log.e("dfd", "getTime: "+simpleDateFormat.format(date) );
         return simpleDateFormat.format(date);
     }
 }

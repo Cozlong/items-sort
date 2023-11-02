@@ -2,13 +2,16 @@ package com.example.hotelmanager.fragment;
 
 import android.content.Context;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.ImageButton;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.fragment.app.Fragment;
 import androidx.recyclerview.widget.LinearLayoutManager;
@@ -17,6 +20,7 @@ import androidx.recyclerview.widget.RecyclerView;
 import com.example.hotelmanager.R;
 import com.example.hotelmanager.adapter.ItemAdapter;
 import com.example.hotelmanager.bean.Item;
+import com.example.hotelmanager.bean.Type;
 import com.example.hotelmanager.data.ItemDBHelper;
 import com.example.hotelmanager.data.ItemDao;
 
@@ -31,7 +35,7 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     private List<Item> ItemlList;
     private ItemAdapter adapter;
     private EditText itemName;
-    private ImageView search;
+    private ImageButton search;
     private View view = null;
     private RecyclerView ItemrecyclerView;
     private Button bt_sort;
@@ -108,6 +112,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
         mContext=getActivity();
         itemDao=new ItemDao(new ItemDBHelper(mContext));
         ItemrecyclerView=(RecyclerView) view.findViewById(R.id.item_list);
+        itemName=(EditText)view.findViewById(R.id.note_searchET);
+        search=(ImageButton)view.findViewById(R.id.note_searchBtn);
+        search.setOnClickListener(this);
         sort=(TextView) view.findViewById(R.id.sort_text);
         term=(TextView) view.findViewById(R.id.term_text);
         bt_sort=(Button) view.findViewById(R.id.sort);
@@ -121,6 +128,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     @Override
     public void onClick(View v) {
         switch (v.getId()){
+            case R.id.note_searchBtn:
+                searchAsItemName();
+                break;
             case R.id.sort:
                 startQuerySortList();
                 break;
@@ -142,10 +152,25 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
     }
 
     private void startQuerySortList(){
+        String sql="select item_type,count(*) from item group by item_type";
+        List<Type> typeList=new ArrayList<>();
+        itemDao.execQuery(typeList,sql);
 
     }
 
     private void startQueryTermList(){
+
+    }
+
+    private void searchAsItemName(){
+        if (itemName.getText().toString().equals("")) {
+            Toast.makeText(mContext, "物品名称不能为空", Toast.LENGTH_SHORT).show();
+        } else {
+            sendJson();
+        }
+    }
+
+    private void sendJson(){
 
     }
 }

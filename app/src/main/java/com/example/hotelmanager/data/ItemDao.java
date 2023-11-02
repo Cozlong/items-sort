@@ -97,7 +97,7 @@ public class ItemDao {
             item.setItem_number(cursor.getInt(cursor.getColumnIndex("item_number")));
             item.setDate_now(cursor.getString(cursor.getColumnIndex("date_now")));
             item.setDate_of_manufacture(getDate(cursor.getString(cursor.getColumnIndex("date_of_manufacture"))));
-            item.setQuality_guarantee_period(cursor.getInt(cursor.getColumnIndex("date_of_manufacture")));
+            item.setQuality_guarantee_period(cursor.getInt(cursor.getColumnIndex("quality_guarantee_period")));
             item.setRemind_days(cursor.getInt(cursor.getColumnIndex("remind_days")));
             list.add(item);
         }

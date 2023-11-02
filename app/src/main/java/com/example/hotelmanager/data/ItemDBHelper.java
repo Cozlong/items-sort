@@ -3,6 +3,7 @@ package com.example.hotelmanager.data;
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
+import android.util.Log;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -44,6 +45,7 @@ public class ItemDBHelper extends SQLiteOpenHelper {
     public static final String getTime(){
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat("yyyy-MM-dd");
         Date date = new Date(System.currentTimeMillis());
+        Log.e("dfd", "getTime: "+simpleDateFormat.format(date) );
         return simpleDateFormat.format(date);
     }
 }

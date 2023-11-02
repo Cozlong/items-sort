@@ -124,11 +124,9 @@ public class HomeFragment extends Fragment implements View.OnClickListener {
             case R.id.sort:
                 startQuerySortList();
                 break;
-
             case R.id.term:
                 startQueryTermList();
                 break;
-
             default:
                 return;
         }
